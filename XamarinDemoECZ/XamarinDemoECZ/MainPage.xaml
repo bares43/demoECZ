@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinDemoECZ"
+             xmlns:viewModels="clr-namespace:XamarinDemoECZ.ViewModels"
+             xmlns:htmlLabel="clr-namespace:LabelHtml.Forms.Plugin.Abstractions;assembly=HtmlLabel.Forms.Plugin"
+             xmlns:views="clr-namespace:XamarinDemoECZ.Views"
+             x:Class="XamarinDemoECZ.MainPage">
+
+    <ContentPage.BindingContext>
+        <viewModels:MainPageViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout BackgroundColor="#EEEEEE">
+
+        <views:TopNavigation />
+
+        <ListView ItemsSource="{Binding Items}" SeparatorVisibility="None" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ContentView>
+                            <Frame OutlineColor="#E0E0E0" Margin="20,5" BackgroundColor="White">
+                                <htmlLabel:HtmlLabel Text="{Binding Content}"/>
+                            </Frame>
+                        </ContentView>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <views:BottomNavigation />
+
+    </StackLayout>
+
+</ContentPage>

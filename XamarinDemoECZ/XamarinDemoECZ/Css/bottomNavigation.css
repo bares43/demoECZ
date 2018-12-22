@@ -1,0 +1,11 @@
+﻿label {
+    color: white;
+}
+
+    label.icon {
+        font-size: large;
+    }
+
+    label#home {
+        font-size: 40;
+    }

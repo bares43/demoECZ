@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:XamarinDemoECZ.Views"
+             
+             x:Class="XamarinDemoECZ.SettingsPage">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <views:TopNavigation />
+
+            <Label Text="Nastavení..."
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        
+            <views:BottomNavigation />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

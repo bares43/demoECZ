@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:XamarinDemoECZ.ViewModels"
+             x:Class="XamarinDemoECZ.Views.BottomNavigation"
+             BackgroundColor="#BF360C"
+             >
+    
+    <ContentView.Resources>
+        <StyleSheet Source="../Css/bottomNavigation.css" />
+    </ContentView.Resources>
+    
+    <ContentView.BindingContext>
+        <viewModels:BottomNavigationViewModel />
+    </ContentView.BindingContext>
+
+    <ContentView.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+
+            <Label Text="{Binding IconTeam}" StyleClass="icon" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String" Android="fa-regular-400.ttf#Font Awesome 5 Free Regular" iOS="Font Awesome 5 Free" />
+                </Label.FontFamily>
+            </Label>
+            
+            <Label Text="{Binding IconCalendar}" StyleClass="icon" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String" Android="fa-regular-400.ttf#Font Awesome 5 Free Regular" iOS="Font Awesome 5 Free" />
+                </Label.FontFamily>
+            </Label>
+            
+            <Label Text="{Binding IconHome}" StyleClass="icon" StyleId="home" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String" Android="fa-regular-400.ttf#Font Awesome 5 Free Regular" iOS="Font Awesome 5 Free" />
+                </Label.FontFamily>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OpenHomeCommand}"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label Text="{Binding IconMessages}" StyleClass="icon" Grid.Row="0" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String" Android="fa-regular-400.ttf#Font Awesome 5 Free Regular" iOS="Font Awesome 5 Free" />
+                </Label.FontFamily>
+            </Label>
+
+            <Label Text="{Binding IconNotifications}" StyleClass="icon" Grid.Row="0" Grid.Column="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String" Android="fa-regular-400.ttf#Font Awesome 5 Free Regular" iOS="Font Awesome 5 Free" />
+                </Label.FontFamily>
+            </Label>
+
+        </Grid>
+    </ContentView.Content>
+</ContentView>

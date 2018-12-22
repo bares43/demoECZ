@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:XamarinDemoECZ"   
+             x:Class="XamarinDemoECZ.AppShell"
+             RouteScheme="app" 
+             RouteHost="microsoft.com" 
+             Route="newapp" 
+             FlyoutBehavior="Disabled" >
+
+    <ShellItem Title="Home" Route="home">
+        <ShellSection>
+            <ShellContent>
+                <pages:MainPage />
+            </ShellContent>
+        </ShellSection>
+    </ShellItem>
+
+    <ShellItem Title="Nastavení"  Route="settings">
+        <ShellSection>
+            <ShellContent>
+                <pages:SettingsPage />
+            </ShellContent>
+        </ShellSection>
+    </ShellItem>
+
+</Shell>
